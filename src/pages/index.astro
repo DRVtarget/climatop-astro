@@ -1,11 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Layout title="Climatop – Air Conditioning Experts">
+
+<section class="hero">
+  <div class="container">
+    <h1>Professional Air Conditioning in Costa Blanca</h1>
+    <p>Installation • Maintenance • Repairs</p>
+    <a href="tel:+34XXXXXXXXX" class="btn">Call Now</a>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <ul>
+      <li>New AC Installation</li>
+      <li>Full System Maintenance</li>
+      <li>Emergency Repairs</li>
+      <li>Heat Pumps</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+.hero {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.services {
+  padding: 80px 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+</style>
