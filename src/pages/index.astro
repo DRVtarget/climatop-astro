@@ -1,54 +1,407 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+const PHONE = "+34XXXXXXXXX";       // ← смени
+const PHONE_TEL = "+34XXXXXXXXX";   // ← смени (без интервали)
+const WHATSAPP = "34XXXXXXXXX";     // ← смени (34 + номер без +)
+
+const title = "Climatop – Air Conditioning Costa Blanca | Installation, Repairs & Maintenance";
+const description =
+  "Professional AC installation, maintenance & repairs in Torrevieja, Orihuela Costa and Costa Blanca. Fast response, clean installation, English-speaking service.";
 ---
 
-<Layout title="Climatop – Air Conditioning Experts">
+<Layout title={title} description={description}>
+  <section class="hero">
+    <div class="container">
+      <div class="heroGrid">
+        <div class="heroText">
+          <div class="badge">English-speaking • Costa Blanca</div>
+          <h1>Professional Air Conditioning in Costa Blanca</h1>
+          <p>
+            Installation • Maintenance • Repairs • Heat Pumps
+            <span class="muted"> — Torrevieja, Orihuela Costa & nearby.</span>
+          </p>
 
-<section class="hero">
-  <div class="container">
-    <h1>Professional Air Conditioning in Costa Blanca</h1>
-    <p>Installation • Maintenance • Repairs</p>
-    <a href="tel:+34XXXXXXXXX" class="btn">Call Now</a>
-  </div>
-</section>
+          <div class="heroButtons">
+            <a class="btn btnPrimary" href={`tel:${PHONE_TEL}`}>Call Now</a>
+            <a class="btn" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn ghost" href="#contact">Get a quote</a>
+          </div>
 
-<section class="services">
-  <div class="container">
-    <h2>Our Services</h2>
-    <ul>
-      <li>New AC Installation</li>
-      <li>Full System Maintenance</li>
-      <li>Emergency Repairs</li>
-      <li>Heat Pumps</li>
-    </ul>
-  </div>
-</section>
+          <div class="trust">
+            <div class="trustItem">
+              <span class="dot ok"></span>
+              <span>Fast response</span>
+            </div>
+            <div class="trustItem">
+              <span class="dot"></span>
+              <span>Clean installation</span>
+            </div>
+            <div class="trustItem">
+              <span class="dot"></span>
+              <span>Transparent pricing</span>
+            </div>
+          </div>
+        </div>
 
-<style>
-.hero {
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  text-align: center;
-}
+        <div class="heroCard" aria-label="Quick info card">
+          <div class="cardTop">
+            <div class="cardTitle">Free consultation</div>
+            <div class="cardSub">Send photos on WhatsApp for a quick estimate.</div>
+          </div>
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
+          <div class="cardList">
+            <div class="cardRow">
+              <div class="k">Phone</div>
+              <div class="v"><a href={`tel:${PHONE_TEL}`}>{PHONE}</a></div>
+            </div>
+            <div class="cardRow">
+              <div class="k">WhatsApp</div>
+              <div class="v"><a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">Chat now</a></div>
+            </div>
+            <div class="cardRow">
+              <div class="k">Areas</div>
+              <div class="v">Torrevieja • Orihuela Costa • Guardamar</div>
+            </div>
+          </div>
 
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-}
+          <div class="cardCta">
+            <a class="btn btnPrimary full" href="#contact">Request a quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-.services {
-  padding: 80px 20px;
-  background: #f5f5f5;
-  text-align: center;
-}
-</style>
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p class="lead">Everything for your comfort — from new AC install to emergency repairs.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>New AC Installation</h3>
+          <p>Proper sizing, clean piping, vacuum + pressure test, perfect finish.</p>
+          <ul>
+            <li>Split / Multi-split</li>
+            <li>Ducted systems</li>
+            <li>Heat pumps</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Maintenance</h3>
+          <p>Prevent failures, improve air quality, and reduce electricity usage.</p>
+          <ul>
+            <li>Deep cleaning</li>
+            <li>Gas check</li>
+            <li>Seasonal service</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Repairs</h3>
+          <p>Fast diagnostics and honest recommendations — repair only when it makes sense.</p>
+          <ul>
+            <li>No cooling / leaks</li>
+            <li>Noise / vibration</li>
+            <li>Electrical faults</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas" class="section alt">
+    <div class="container">
+      <div class="twoCol">
+        <div>
+          <h2>Service Areas</h2>
+          <p class="lead">
+            We cover the main areas of Costa Blanca South.
+          </p>
+          <div class="pillRow">
+            <span class="pill">Torrevieja</span>
+            <span class="pill">Orihuela Costa</span>
+            <span class="pill">Guardamar</span>
+            <span class="pill">La Zenia</span>
+            <span class="pill">Villamartin</span>
+            <span class="pill">San Miguel</span>
+          </div>
+        </div>
+
+        <div class="note">
+          <h3>Quick estimate</h3>
+          <p>
+            Send 2–3 photos + your location on WhatsApp and we’ll reply with options and a price range.
+          </p>
+          <a class="btn btnPrimary" href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">WhatsApp now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <div class="container">
+      <h2>Why Climatop</h2>
+      <div class="whyGrid">
+        <div class="whyItem">
+          <h3>Quality installation</h3>
+          <p>Correct vacuuming, pressure testing, and neat finishing.</p>
+        </div>
+        <div class="whyItem">
+          <h3>Clear communication</h3>
+          <p>English-speaking support — simple explanations, no surprises.</p>
+        </div>
+        <div class="whyItem">
+          <h3>Reliable service</h3>
+          <p>We show up, we fix it, we keep it clean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="contact">
+        <div>
+          <h2>Contact</h2>
+          <p class="lead">Call or WhatsApp — fastest response.</p>
+          <div class="contactBox">
+            <div class="row">
+              <div class="k">Phone</div>
+              <div class="v"><a href={`tel:${PHONE_TEL}`}>{PHONE}</a></div>
+            </div>
+            <div class="row">
+              <div class="k">WhatsApp</div>
+              <div class="v"><a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">Open chat</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formCard">
+          <h3>Get a quote</h3>
+          <p class="mutedSmall">For now this is a simple mailto. Later can connect a form.</p>
+          <a class="btn btnPrimary full" href={`mailto:info@climatop.eu?subject=Quote%20request&body=Hi%20Climatop,%0A%0AName:%0ALocation:%0AService:%0APhone:%0A%0ADetails:%0A`}>
+            Email quote request
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero{
+      padding: 72px 0 54px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+    .badge{
+      display:inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.86);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    h1{
+      font-size: 54px;
+      line-height: 1.05;
+      margin: 0 0 12px;
+      letter-spacing: -0.6px;
+    }
+    .muted{ color: rgba(255,255,255,.75); }
+    .heroText p{
+      margin: 0 0 18px;
+      font-size: 18px;
+      color: rgba(255,255,255,.86);
+    }
+    .heroButtons{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 13px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      font-weight: 800;
+      transition: .25s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); background: rgba(255,255,255,.09); }
+    .btnPrimary{
+      border-color: rgba(46,125,246,.45);
+      background: linear-gradient(135deg, #2e7df6, #1f5ed1);
+      box-shadow: 0 18px 40px rgba(46,125,246,.25);
+    }
+    .ghost{ background: rgba(255,255,255,.03); }
+
+    .trust{
+      display:flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: rgba(255,255,255,.78);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .trustItem{ display:flex; align-items:center; gap:8px; }
+    .dot{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: rgba(255,255,255,.4);
+    }
+    .dot.ok{ background: #14c38e; }
+
+    .heroCard{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 18px 60px rgba(0,0,0,.25);
+      overflow:hidden;
+      display:flex;
+      flex-direction: column;
+    }
+    .cardTop{
+      padding: 18px 18px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(135deg, rgba(46,125,246,.22), rgba(20,195,142,.10));
+    }
+    .cardTitle{ font-weight: 900; font-size: 16px; }
+    .cardSub{ color: rgba(255,255,255,.78); margin-top: 6px; font-size: 14px; }
+
+    .cardList{ padding: 14px 18px; display:grid; gap:10px; }
+    .cardRow{ display:flex; justify-content:space-between; gap:10px; }
+    .k{ color: rgba(255,255,255,.72); font-weight: 700; }
+    .v{ font-weight: 900; }
+    .v a{ text-decoration: underline; text-decoration-color: rgba(255,255,255,.25); }
+
+    .cardCta{ padding: 0 18px 18px; }
+    .full{ width: 100%; }
+
+    .section{ padding: 64px 0; }
+    .alt{
+      background: rgba(255,255,255,.03);
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+    }
+    .lead{
+      margin: 0 0 22px;
+      color: rgba(255,255,255,.78);
+      font-size: 16px;
+      max-width: 70ch;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      padding: 18px;
+    }
+    .card h3{ margin: 0 0 8px; font-size: 18px; }
+    .card p{ margin: 0 0 12px; color: rgba(255,255,255,.75); }
+    .card ul{ margin: 0; padding-left: 18px; color: rgba(255,255,255,.80); }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .pillRow{ display:flex; flex-wrap: wrap; gap:10px; }
+    .pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      font-weight: 800;
+      color: rgba(255,255,255,.84);
+      font-size: 13px;
+    }
+    .note{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      padding: 18px;
+    }
+    .note h3{ margin: 0 0 6px; }
+    .note p{ margin: 0 0 12px; color: rgba(255,255,255,.75); }
+
+    .whyGrid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .whyItem{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      padding: 18px;
+    }
+    .whyItem h3{ margin: 0 0 6px; }
+    .whyItem p{ margin: 0; color: rgba(255,255,255,.75); }
+
+    .contact{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .contactBox{
+      margin-top: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      padding: 14px 16px;
+      display:grid;
+      gap: 10px;
+      max-width: 520px;
+    }
+    .contactBox .row{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .contactBox .row:last-child{ border-bottom: none; padding-bottom: 0; }
+
+    .formCard{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      padding: 18px;
+    }
+    .mutedSmall{ color: rgba(255,255,255,.72); font-size: 14px; margin-top: 6px; }
+
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      h1{ font-size: 44px; }
+      .cards{ grid-template-columns: 1fr; }
+      .twoCol{ grid-template-columns: 1fr; }
+      .whyGrid{ grid-template-columns: 1fr; }
+      .contact{ grid-template-columns: 1fr; }
+    }
+  </style>
+</Layout>
