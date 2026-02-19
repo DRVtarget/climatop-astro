@@ -1,591 +1,515 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const PHONE = "+34XXXXXXXXX"; // <-- сложи реален телефон (само цифри и +)
-const EMAIL = "info@climatop.es";
-const WHATSAPP = "https://wa.me/34XXXXXXXXX?text=Hello%20Climatop!%20I%20need%20a%20quick%20estimate%20for%20AC.";
-const MAPS = "https://www.google.com/maps?q=Torrevieja";
 ---
 
 <Layout
-  title="Climatop — Air Conditioning in Costa Blanca"
-  description="Professional air conditioning installation, maintenance & repairs in Costa Blanca South. Fast response. WhatsApp estimate."
+  title="Climatop – Air Conditioning in Costa Blanca"
+  description="Professional air conditioning installation, maintenance & repairs in Costa Blanca South. Fast response, clean installation, transparent pricing."
 >
-  <!-- Top Nav -->
-  <header class="topnav">
-    <div class="container navInner">
-      <a class="brand" href="/">
-        <span class="logoDot">C</span>
-        <span class="brandText">Climatop</span>
-      </a>
-
-      <nav class="links">
-        <a href="#services">Services</a>
-        <a href="#areas">Areas</a>
-        <a href="#why">Why us</a>
-        <a href="#brands">Brands</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="navCtas">
-        <a class="btn btn-dark" href={`tel:${PHONE}`}>Call</a>
-        <a class="btn btn-green" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a>
-        <a class="btn btn-primary" href="#contact">Get quote</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
   <section class="hero">
-    <div class="container heroGrid">
-      <div class="heroLeft">
-        <div class="pill">English-speaking • Costa Blanca South</div>
-
-        <h1>
-          Professional Air Conditioning in Costa Blanca
-        </h1>
-
-        <p class="heroSub">
-          Installation • Maintenance • Repairs • Heat Pumps — Torrevieja, Orihuela Costa, Guardamar & nearby.
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="pill">English-speaking · Costa Blanca South</div>
+        <h1>Professional Air Conditioning in Costa Blanca</h1>
+        <p class="lead">
+          Installation · Maintenance · Repairs · Heat Pumps — Torrevieja, Orihuela Costa, Guardamar and nearby.
         </p>
 
-        <div class="heroCtas">
-          <a class="btn btn-primary" href={`tel:${PHONE}`}>Call Now</a>
-          <a class="btn btn-green" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a>
-          <a class="btn" href="#contact">Get a quote</a>
+        <div class="cta">
+          <a class="btn primary" href="tel:+34XXXXXXXXX">Call now</a>
+          <a class="btn whatsapp" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="btn ghost" href="#contact">Request a quote</a>
         </div>
 
-        <div class="trustRow">
-          <span class="dot green"></span><span>Fast response</span>
-          <span class="sep">•</span>
-          <span class="dot blue"></span><span>Clean installation</span>
-          <span class="sep">•</span>
-          <span class="dot gray"></span><span>Transparent pricing</span>
+        <div class="trust">
+          <div class="trust-item"><span class="dot ok"></span> Fast response</div>
+          <div class="trust-item"><span class="dot ok"></span> Clean installation</div>
+          <div class="trust-item"><span class="dot ok"></span> Transparent pricing</div>
         </div>
       </div>
 
-      <div class="heroRight">
-        <div class="card heroCard">
-          <div class="heroCardTop">
-            <div>
-              <div class="heroCardTitle">Free consultation</div>
-              <div class="heroCardSub">Send photos on WhatsApp for a quick estimate.</div>
-            </div>
+      <aside class="hero-card">
+        <div class="hero-card-top">
+          <div>
+            <div class="hero-card-title">Free consultation</div>
+            <div class="hero-card-sub">Send photos on WhatsApp for a quick estimate.</div>
+          </div>
+          <div class="badge">Typically same-day reply</div>
+        </div>
+
+        <div class="hero-card-body">
+          <div class="row">
+            <div class="k">Phone</div>
+            <a class="v" href="tel:+34XXXXXXXXX">+34 XXX XXX XXX</a>
+          </div>
+          <div class="row">
+            <div class="k">WhatsApp</div>
+            <a class="v" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noreferrer">Chat now</a>
+          </div>
+          <div class="row">
+            <div class="k">Areas</div>
+            <div class="v">Torrevieja · Orihuela Costa · Guardamar</div>
           </div>
 
-          <div class="heroCardBody">
-            <div class="kv">
-              <div class="k">Phone</div>
-              <div class="v"><a href={`tel:${PHONE}`}>{PHONE}</a></div>
-            </div>
+          <a class="btn wide primary" href="#contact">Request a quote</a>
 
-            <div class="kv">
-              <div class="k">WhatsApp</div>
-              <div class="v"><a href={WHATSAPP} target="_blank" rel="noreferrer">Chat now</a></div>
-            </div>
-
-            <div class="kv">
-              <div class="k">Areas</div>
-              <div class="v">Torrevieja • Orihuela Costa • Guardamar</div>
-            </div>
-
-            <a class="btn btn-primary heroCardBtn" href="#contact">Request a quote</a>
-
-            <div class="miniNote">Typical reply time: 10–30 min (working hours)</div>
+          <div class="small">
+            Tell us: location + m² + photos of indoor & outdoor unit position.
           </div>
         </div>
-      </div>
+      </aside>
     </div>
 
-    <div class="heroFade"></div>
+    <div class="hero-fade"></div>
   </section>
 
-  <!-- SERVICES (LIGHT SECTION) -->
-  <section id="services" class="block">
+  <section id="services" class="section">
     <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-sub">Everything for your comfort — from new installs to emergency repairs.</p>
+      <div class="section-head">
+        <h2>Our Services</h2>
+        <p>Everything for your comfort — from new installations to emergency repairs.</p>
+      </div>
 
-      <div class="cards3">
-        <div class="cardLight mini">
+      <div class="cards">
+        <article class="card">
           <h3>New AC Installation</h3>
-          <p>Proper sizing, clean piping, vacuuming & pressure test — perfect finish.</p>
-          <ul class="list">
-            <li>Split / Multi split</li>
+          <p>Proper sizing, clean piping, vacuum & pressure test, perfect finish.</p>
+          <ul>
+            <li>Split / Multi-split</li>
             <li>Ducted systems</li>
             <li>Heat pumps</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="cardLight mini">
+        <article class="card">
           <h3>Maintenance</h3>
           <p>Prevent failures, improve air quality, and reduce electricity usage.</p>
-          <ul class="list">
+          <ul>
             <li>Deep cleaning</li>
             <li>Gas check</li>
             <li>Seasonal service</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="cardLight mini">
+        <article class="card">
           <h3>Repairs</h3>
           <p>Fast diagnostics and honest recommendations — repair only when it makes sense.</p>
-          <ul class="list">
+          <ul>
             <li>No cooling / leaks</li>
             <li>Noise / vibration</li>
             <li>Electrical faults</li>
           </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas" class="section alt">
+    <div class="container two-col">
+      <div class="panel">
+        <h2>Service Areas</h2>
+        <p>We cover the main areas of Costa Blanca South.</p>
+        <div class="chips">
+          <span class="chip">Torrevieja</span>
+          <span class="chip">Orihuela Costa</span>
+          <span class="chip">Guardamar</span>
+          <span class="chip">La Zenia</span>
+          <span class="chip">Villamartin</span>
+          <span class="chip">San Miguel</span>
+        </div>
+        <div class="mini">
+          <div class="mini-item">• Homeowners & rentals</div>
+          <div class="mini-item">• Businesses & commercial</div>
+          <div class="mini-item">• New builds & renovations</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Quick estimate</h2>
+        <p>Send 2–3 photos + your location on WhatsApp and we’ll reply with options and a price range.</p>
+        <div class="cta">
+          <a class="btn whatsapp" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noreferrer">WhatsApp now</a>
+          <a class="btn ghost" href="tel:+34XXXXXXXXX">Call</a>
+        </div>
+        <div class="small">
+          Pro tip: include “m²”, “apartment / house”, and preferred brand if you have one.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AREAS (LIGHT) -->
-  <section id="areas" class="block">
+  <section id="why" class="section">
     <div class="container">
-      <h2 class="section-title">Service Areas</h2>
-      <p class="section-sub">Costa Blanca South — fast response in the main zones.</p>
-
-      <div class="areasGrid">
-        <div class="cardLight mini">
-          <h3>Areas we cover</h3>
-          <div class="chips">
-            <span class="chip">Torrevieja</span>
-            <span class="chip">Orihuela Costa</span>
-            <span class="chip">Guardamar</span>
-            <span class="chip">La Zenia</span>
-            <span class="chip">Villamartin</span>
-            <span class="chip">San Miguel</span>
-          </div>
-
-          <ul class="list">
-            <li>Homeowners & rentals</li>
-            <li>Businesses & commercial</li>
-            <li>New builds & renovations</li>
-          </ul>
-        </div>
-
-        <div class="cardLight mini">
-          <h3>Quick estimate</h3>
-          <p>Send 2–3 photos + location on WhatsApp. We reply with options and a price range.</p>
-
-          <div class="cta-row">
-            <a class="btn btn-green" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp now</a>
-            <a class="btn" href={`tel:${PHONE}`}>Call</a>
-          </div>
-
-          <p class="small">Tip: include indoor + outdoor unit photos and your location.</p>
-        </div>
+      <div class="section-head center">
+        <h2>Why Climatop</h2>
+        <p>Professional work, clear communication, and service you can trust.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- WHY (DARK STRIP) -->
-  <section id="why" class="darkStrip">
-    <div class="container">
-      <h2 class="section-title darkTitle">Why Climatop</h2>
-      <p class="section-sub darkSub">Professional work, clear communication, and service you can trust.</p>
-
-      <div class="whyGrid">
-        <div class="card whyCard">
+      <div class="cards three">
+        <article class="card soft">
           <h3>Quality installation</h3>
           <p>Clean lines, correct vacuuming, safe electrics, and a tidy finish.</p>
-        </div>
-        <div class="card whyCard">
+        </article>
+        <article class="card soft">
           <h3>Clear communication</h3>
           <p>We explain options simply and send a clear quote before work starts.</p>
-        </div>
-        <div class="card whyCard">
+        </article>
+        <article class="card soft">
           <h3>Reliable service</h3>
           <p>Fast response in Costa Blanca South and warranty on our work.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- BRANDS (LIGHT) -->
-  <section id="brands" class="block">
+  <section id="brands" class="section alt">
     <div class="container">
-      <h2 class="section-title">Brands we work with</h2>
-      <p class="section-sub">We install and service the most common AC brands in Spain.</p>
-
-      <div class="brandRow">
-        <span class="brandChip">Mitsubishi</span>
-        <span class="brandChip">Daikin</span>
-        <span class="brandChip">Fujitsu</span>
-        <span class="brandChip">Panasonic</span>
-        <span class="brandChip">LG</span>
-        <span class="brandChip">Samsung</span>
-        <span class="brandChip">Ferroli</span>
+      <div class="section-head center">
+        <h2>Brands we work with</h2>
+        <p>We install and service the most common AC brands in Spain.</p>
       </div>
 
-      <div style="margin-top:18px">
-        <a class="btn btn-primary" href="#contact">Get a quote</a>
+      <div class="brand-row">
+        <span class="brand-pill">Mitsubishi</span>
+        <span class="brand-pill">Daikin</span>
+        <span class="brand-pill">Fujitsu</span>
+        <span class="brand-pill">Panasonic</span>
+        <span class="brand-pill">LG</span>
+        <span class="brand-pill">Samsung</span>
+        <span class="brand-pill">Ferroli</span>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT (LIGHT) -->
-  <section id="contact" class="block">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-sub">Tell us what you need — we reply fast.</p>
-
-      <div class="contactGrid">
-        <div class="cardLight mini">
-          <h3>Call / WhatsApp</h3>
-
-          <div class="contactLine">
-            <div class="label">Phone</div>
-            <div class="value"><a href={`tel:${PHONE}`}>{PHONE}</a></div>
-          </div>
-
-          <div class="contactLine">
-            <div class="label">WhatsApp</div>
-            <div class="value"><a href={WHATSAPP} target="_blank" rel="noreferrer">Open chat</a></div>
-          </div>
-
-          <div class="contactLine">
-            <div class="label">Email</div>
-            <div class="value"><a href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
-          </div>
-
-          <div class="cta-row" style="margin-top:14px">
-            <a class="btn btn-green" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp now</a>
-            <a class="btn btn-primary" href={`tel:${PHONE}`}>Call</a>
-          </div>
-        </div>
-
-        <div class="cardLight mini">
-          <h3>Working area</h3>
-          <p>We operate mainly in Costa Blanca South. If you’re outside the area, ask anyway.</p>
-          <a class="btn" href={MAPS} target="_blank" rel="noreferrer">Open in Google Maps</a>
-          <p class="small" style="margin-top:12px">
-            Torrevieja • Orihuela Costa • Guardamar • La Zenia • Villamartin • San Miguel
-          </p>
-        </div>
+      <div class="center">
+        <a class="btn primary" href="#contact">Get a quote</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (DARK) -->
-  <footer class="footer">
-    <div class="container footerGrid">
-      <div>
-        <div class="brandFooter">
-          <span class="logoDot">C</span>
-          <strong>Climatop</strong>
-        </div>
-        <p class="footText">
-          Air conditioning installation, maintenance & repairs in Costa Blanca South.
-          Torrevieja • Orihuela Costa • Guardamar and nearby.
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="panel contact-panel">
+        <h2>Request a quote</h2>
+        <p class="muted">
+          Message us on WhatsApp with your location + photos and we’ll reply with the best options.
         </p>
-      </div>
 
-      <div>
-        <div class="footTitle">Quick links</div>
-        <a class="footLink" href="#services">Services</a>
-        <a class="footLink" href="#areas">Service areas</a>
-        <a class="footLink" href="#brands">Brands</a>
-        <a class="footLink" href="#contact">Contact</a>
-      </div>
+        <div class="cta">
+          <a class="btn whatsapp" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="btn ghost" href="tel:+34XXXXXXXXX">Call</a>
+          <a class="btn ghost" href="mailto:info@climatop.es">Email</a>
+        </div>
 
-      <div>
-        <div class="footTitle">Contact</div>
-        <div class="footText"><a href={`tel:${PHONE}`}>{PHONE}</a></div>
-        <div class="footText"><a href={`mailto:${EMAIL}`}>{EMAIL}</a></div>
-        <div class="footText"><a href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a></div>
+        <div class="small">
+          Available: Mon–Sat · Costa Blanca South
+        </div>
       </div>
     </div>
-
-    <div class="container copy">
-      © {new Date().getFullYear()} Climatop. All rights reserved.
-    </div>
-  </footer>
+  </section>
 
   <style>
-    /* NAV */
-    .topnav{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(11,18,32,.72);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(10px);
+    /* Reuse same button styles from Layout, but add a couple extras locally */
+    .btn.ghost{
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: none;
     }
-    .navInner{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px 0;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight: 900;
-    }
-    .logoDot{
-      width: 34px; height: 34px;
-      border-radius: 10px;
-      display:flex; align-items:center; justify-content:center;
-      background: linear-gradient(180deg, rgba(43,116,255,1), rgba(31,88,210,1));
-      color: white;
-      font-weight: 950;
-    }
-    .brandText{ letter-spacing: .2px; }
-    .links{
-      display:flex;
-      gap: 16px;
-      color: rgba(255,255,255,.78);
-      font-weight: 800;
-      font-size: 14px;
-    }
-    .links a:hover{ color: rgba(255,255,255,.98); }
-    .navCtas{ display:flex; gap: 10px; }
-
-    @media (max-width: 980px){
-      .links{ display:none; }
-    }
-    @media (max-width: 520px){
-      .navCtas .btn{ padding: 10px 12px; font-size: 14px; }
-      .brandText{ display:none; }
+    .btn.wide{
+      width: 100%;
+      margin-top: 14px;
+      justify-content: center;
+      padding: 12px 14px;
     }
 
-    /* HERO */
     .hero{
       position: relative;
-      padding: 54px 0 72px;
-      background:
-        radial-gradient(900px 380px at 25% 20%, rgba(43,116,255,.22), transparent 60%),
-        radial-gradient(900px 380px at 75% 10%, rgba(25,195,125,.16), transparent 60%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      padding: 64px 0 22px;
       overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      background:
+        radial-gradient(1200px 600px at 30% 0%, rgba(255,255,255,.08), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
     }
-    .heroFade{
-      position:absolute; left:0; right:0; bottom:-1px;
-      height: 70px;
-      background: linear-gradient(180deg, rgba(246,248,252,0) 0%, rgba(246,248,252,1) 100%);
-      pointer-events:none;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 22px;
+
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.25fr .85fr;
+      gap: 26px;
       align-items: center;
     }
+
     .pill{
-      display:inline-flex;
-      align-items:center;
-      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
       border-radius: 999px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.85);
-      font-weight: 800;
-      font-size: 13px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: rgba(255,255,255,.75);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .2px;
       margin-bottom: 14px;
     }
+
     h1{
-      margin: 0 0 10px;
-      font-size: 46px;
-      line-height: 1.08;
-      letter-spacing: -0.6px;
+      font-size: 52px;
+      line-height: 1.05;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.8px;
     }
-    .heroSub{
-      margin: 0 0 18px;
+
+    .lead{
       color: rgba(255,255,255,.78);
-      max-width: 60ch;
-      font-size: 16.5px;
+      font-size: 16px;
+      margin: 0 0 18px 0;
+      max-width: 58ch;
     }
-    .heroCtas{ display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 14px; }
-    .trustRow{
-      display:flex; flex-wrap:wrap; align-items:center; gap: 10px;
-      color: rgba(255,255,255,.72);
-      font-weight: 800;
+
+    .cta{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .trust{
+      display:flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      color: rgba(255,255,255,.70);
+      font-weight: 700;
       font-size: 13px;
     }
-    .sep{ opacity: .35; }
-    .dot{ width:8px; height:8px; border-radius:99px; display:inline-block; margin-right:6px; }
-    .green{ background: var(--accent2); }
-    .blue{ background: var(--accent); }
-    .gray{ background: rgba(255,255,255,.5); }
-
-    .heroCard{ padding: 16px; }
-    .heroCardTop{ display:flex; justify-content:space-between; gap: 10px; margin-bottom: 12px; }
-    .heroCardTitle{ font-weight: 950; font-size: 15px; }
-    .heroCardSub{ color: rgba(255,255,255,.72); font-weight: 700; font-size: 13px; margin-top: 2px; }
-    .heroCardBody{ padding-top: 8px; display:flex; flex-direction:column; gap: 10px; }
-    .kv{ display:flex; justify-content:space-between; gap: 12px; padding: 10px 12px; border-radius: 14px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10); }
-    .k{ color: rgba(255,255,255,.72); font-weight: 800; font-size: 13px; }
-    .v{ font-weight: 900; font-size: 13px; text-align:right; }
-    .heroCardBtn{ width: 100%; margin-top: 6px; border-radius: 14px; }
-    .miniNote{ color: rgba(255,255,255,.62); font-size: 12.5px; font-weight: 700; text-align:center; }
-
-    @media (max-width: 980px){
-      .heroGrid{ grid-template-columns: 1fr; }
-      h1{ font-size: 38px; }
-    }
-
-    /* LIGHT BLOCK SECTIONS */
-    .block{
-      padding: 64px 0;
-      background: var(--light);
-      color: var(--textDark);
-      border-top: 1px solid rgba(11,18,32,.08);
-    }
-    .section-title{
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: -0.3px;
-    }
-    .section-sub{
-      margin: 8px 0 22px;
-      color: var(--mutedDark);
-      font-weight: 700;
-    }
-    .mini{
-      padding: 18px;
-    }
-    .mini h3{
-      margin: 0 0 8px;
-      font-size: 16px;
-      letter-spacing: -0.2px;
-    }
-    .mini p{
-      margin: 0 0 12px;
-      color: var(--mutedDark);
-      font-weight: 650;
-    }
-    .list{
-      margin: 0;
-      padding-left: 16px;
-      color: var(--mutedDark);
-      font-weight: 650;
-    }
-    .cards3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-    @media (max-width: 980px){
-      .cards3{ grid-template-columns: 1fr; }
-    }
-
-    /* Areas */
-    .areasGrid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: start;
-    }
-    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin: 10px 0 12px; }
-    .chip{
-      background: rgba(43,116,255,.08);
-      color: #0b1220;
-      border: 1px solid rgba(11,18,32,.10);
+    .trust-item{
+      display:flex;
+      align-items:center;
+      gap: 8px;
       padding: 8px 10px;
       border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.4);
+    }
+    .dot.ok{ background: #3bd184; }
+
+    .hero-card{
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow: 0 24px 70px rgba(0,0,0,.45);
+      overflow: hidden;
+    }
+    .hero-card-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 16px 12px;
+      background: rgba(255,255,255,.04);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .hero-card-title{
       font-weight: 900;
+      letter-spacing: .2px;
+    }
+    .hero-card-sub{
+      color: rgba(255,255,255,.70);
       font-size: 13px;
+      margin-top: 3px;
     }
-    .cta-row{ display:flex; gap: 10px; flex-wrap: wrap; }
-    .small{ margin: 10px 0 0; font-size: 13px; color: rgba(11,18,32,.68); font-weight: 650; }
-
-    @media (max-width: 900px){
-      .areasGrid{ grid-template-columns: 1fr; }
+    .badge{
+      font-size: 12px;
+      font-weight: 800;
+      color: rgba(255,255,255,.85);
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(47,125,255,.12);
+      white-space: nowrap;
+    }
+    .hero-card-body{
+      padding: 14px 16px 16px;
+    }
+    .row{
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255,255,255,.10);
+    }
+    .row:last-of-type{ border-bottom: none; }
+    .k{
+      color: rgba(255,255,255,.60);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .2px;
+    }
+    .v{
+      font-weight: 900;
+      color: rgba(255,255,255,.92);
+      font-size: 13px;
+      text-align: right;
+    }
+    .small{
+      margin-top: 10px;
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .hero-fade{
+      height: 34px;
+      background: linear-gradient(180deg, rgba(7,12,20,0), rgba(7,12,20,1));
+      margin-top: 26px;
     }
 
-    /* DARK STRIP */
-    .darkStrip{
-      padding: 70px 0;
-      background:
-        radial-gradient(800px 320px at 20% 10%, rgba(43,116,255,.22), transparent 60%),
-        radial-gradient(900px 380px at 85% 0%, rgba(25,195,125,.16), transparent 62%),
-        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+    .section{
+      padding: 56px 0;
+    }
+    .section.alt{
+      background: rgba(255,255,255,.02);
       border-top: 1px solid rgba(255,255,255,.08);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .darkTitle{ color: rgba(255,255,255,.95); }
-    .darkSub{ color: rgba(255,255,255,.72); }
 
-    .whyGrid{
+    .section-head{
+      margin-bottom: 22px;
+    }
+    .section-head.center{ text-align: center; }
+    h2{
+      margin: 0 0 6px 0;
+      font-size: 28px;
+      letter-spacing: -0.4px;
+    }
+    .section-head p{
+      margin: 0;
+      color: rgba(255,255,255,.68);
+      max-width: 70ch;
+    }
+    .section-head.center p{ margin: 0 auto; }
+
+    .cards{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
+      gap: 14px;
     }
-    .whyCard{
+
+    .cards.three{ grid-template-columns: repeat(3, 1fr); }
+
+    .card{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
       padding: 18px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.20);
+      min-height: 170px;
     }
-    .whyCard h3{ margin: 0 0 8px; font-size: 16px; }
-    .whyCard p{ margin: 0; color: rgba(255,255,255,.72); font-weight: 700; }
-
-    @media (max-width: 980px){
-      .whyGrid{ grid-template-columns: 1fr; }
+    .card.soft{
+      background: rgba(255,255,255,.03);
     }
-
-    /* Brands */
-    .brandRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      margin-top: 12px;
+    .card h3{
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      letter-spacing: -0.2px;
     }
-    .brandChip{
-      background: rgba(11,18,32,.06);
-      border: 1px solid rgba(11,18,32,.10);
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-weight: 900;
-      color: rgba(11,18,32,.78);
+    .card p{
+      margin: 0 0 10px 0;
+      color: rgba(255,255,255,.70);
+      font-size: 14px;
+    }
+    .card ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: rgba(255,255,255,.70);
       font-size: 13px;
     }
+    .card li{ margin: 6px 0; }
 
-    /* Contact */
-    .contactGrid{
+    .two-col{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
       align-items: start;
     }
-    .contactLine{
+
+    .panel{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding: 18px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.18);
+    }
+    .panel p{
+      margin: 8px 0 14px 0;
+      color: rgba(255,255,255,.70);
+    }
+
+    .chips{
       display:flex;
-      justify-content:space-between;
-      gap: 12px;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(11,18,32,.10);
-      background: rgba(11,18,32,.03);
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .chip{
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.75);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .mini{
       margin-top: 10px;
+      color: rgba(255,255,255,.70);
+      font-weight: 700;
+      font-size: 13px;
     }
-    .label{ color: rgba(11,18,32,.62); font-weight: 900; font-size: 13px; }
-    .value{ font-weight: 950; font-size: 13px; }
+    .mini-item{ margin: 6px 0; }
 
-    @media (max-width: 900px){
-      .contactGrid{ grid-template-columns: 1fr; }
+    .brand-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .brand-pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.78);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: .2px;
     }
 
-    /* Footer */
-    .footer{
-      padding: 46px 0 20px;
-      background: var(--bg);
-      border-top: 1px solid rgba(255,255,255,.10);
-    }
-    .footerGrid{
-      display:grid;
-      grid-template-columns: 1.4fr .8fr .8fr;
-      gap: 18px;
-      align-items: start;
-    }
-    .brandFooter{ display:flex; align-items:center; gap: 10px; }
-    .footTitle{ font-weight: 950; margin-bottom: 10px; }
-    .footText{ color: rgba(255,255,255,.72); font-weight: 700; margin: 8px 0; }
-    .footLink{ display:block; color: rgba(255,255,255,.72); font-weight: 800; margin: 8px 0; }
-    .footLink:hover{ color: rgba(255,255,255,.95); }
-    .copy{ margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.10); color: rgba(255,255,255,.55); font-weight: 700; font-size: 13px; }
+    .center{ text-align:center; margin-top: 16px; }
 
+    .contact{
+      display:flex;
+      justify-content: center;
+    }
+    .contact-panel{
+      max-width: 760px;
+      width: 100%;
+      text-align: center;
+    }
+    .muted{ color: rgba(255,255,255,.70); }
+
+    /* Responsive */
     @media (max-width: 980px){
-      .footerGrid{ grid-template-columns: 1fr; }
+      .hero-grid{ grid-template-columns: 1fr; }
+      h1{ font-size: 40px; }
+      .cards{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
     }
   </style>
 </Layout>
