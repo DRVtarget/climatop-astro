@@ -1,0 +1,23 @@
+---
+const { title, description, meta } = Astro.props;
+---
+<div class="card service">
+  <div class="top">
+    <h3 class="name">{title}</h3>
+    {meta && <span class="meta">{meta}</span>}
+  </div>
+  <p class="desc">{description}</p>
+  <div class="cta">
+    <span>Learn more</span>
+    <span aria-hidden="true">→</span>
+  </div>
+</div>
+
+<style>
+  .service{ position:relative; overflow:hidden; }
+  .top{ display:flex; align-items:baseline; justify-content:space-between; gap: 14px; }
+  .name{ margin:0; font-size: 18px; letter-spacing: -.01em; }
+  .meta{ font-size: 12px; letter-spacing: .10em; text-transform: uppercase; color: var(--text-muted); }
+  .desc{ margin: 10px 0 0; color: var(--text-muted); }
+  .cta{ margin-top: 18px; display:flex; align-items:center; justify-content:space-between; color: var(--accent-2); font-weight: 600; }
+</style>

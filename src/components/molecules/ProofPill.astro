@@ -1,0 +1,15 @@
+---
+const { text } = Astro.props;
+---
+<span class="pill">
+  <span class="dot" aria-hidden="true"></span>
+  <span>{text}</span>
+</span>
+
+<style>
+  .dot{
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 6px rgba(0,174,239,.18);
+  }
+</style>

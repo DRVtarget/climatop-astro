@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+/* Base light theme */
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-white text-slate-900;
+}
+
+a {
+  @apply text-slate-900;
+}
+
+::selection {
+  @apply bg-slate-900 text-white;
+}
