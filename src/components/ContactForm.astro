@@ -1,0 +1,11 @@
+<form method="POST" action="/api/contact" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+  <input type="text" name="city" placeholder="City" />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+  <button type="submit">Request Free Quote</button>
+</form>
