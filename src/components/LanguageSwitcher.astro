@@ -1,0 +1,34 @@
+---
+import { languages, defaultLang } from "../config/i18n";
+
+const { currentLang = defaultLang, path = "/" } = Astro.props;
+
+// path is the *base* path without language prefix, e.g. "/" or "/services/"
+function hrefFor(lang: string) {
+  if (lang === defaultLang) return path;
+  // ensure trailing slash for Astro routing consistency
+  const clean = path.startsWith("/") ? path : `/${path}`;
+  return `/${lang}${clean}`.replace(/\/\/+/, "/");
+}
+---
+
+<nav class="lang-switcher" aria-label="Language">
+  <ul>
+    {Object.entries(languages).map(([code, label]) => (
+      <li>
+        <a
+          href={hrefFor(code)}
+          aria-current={code === currentLang ? "page" : undefined}
+        >
+          {code.toUpperCase()}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+.lang-switcher ul{display:flex;gap:.5rem;list-style:none;padding:0;margin:0}
+.lang-switcher a{font-size:.85rem;opacity:.8;text-decoration:none}
+.lang-switcher a[aria-current="page"]{opacity:1;font-weight:600;text-decoration:underline}
+</style>

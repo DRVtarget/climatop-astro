@@ -1,0 +1,11 @@
+---
+import { useTranslations } from "../utils/i18n";
+import type { Lang } from "../config/i18n";
+
+const { lang = "en", canonical = "/" } = Astro.props as { lang: Lang; canonical: string };
+const t = useTranslations(lang);
+---
+
+<title>{t("meta_title")}</title>
+<meta name="description" content={t("meta_description")} />
+<link rel="canonical" href={canonical} />
