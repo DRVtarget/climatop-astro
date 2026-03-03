@@ -1,0 +1,68 @@
+---
+const areas = ["Torrevieja", "Orihuela Costa", "Guardamar de Segura", "San Miguel de Salinas", "Ciudad Quesada"];
+---
+<section id="coverage" class="coverage">
+  <div class="container">
+    <h2 class="coverage__title">Service Coverage</h2>
+    <p class="coverage__sub">Professional service across your area of Costa Blanca.</p>
+
+    <div class="coverage__chips">
+      {areas.map((a) => <span class="chip">📍 {a}</span>)}
+    </div>
+
+    <p class="coverage__note">Don’t see your area? Contact us and we’ll confirm availability.</p>
+
+    <div class="coverage__cta">
+      <a class="btn btn--primary" href="#contact">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.coverage{
+  padding: 96px 0;
+  background: radial-gradient(900px 400px at 20% 0%, rgba(31,111,235,.18), transparent 60%),
+              linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+  color: #fff;
+}
+.coverage__title{
+  text-align:center;
+  font-size: var(--h2);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+.coverage__sub{
+  text-align:center;
+  color: rgba(255,255,255,.78);
+  margin: 0 0 34px;
+}
+.coverage__chips{
+  display:grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 860px;
+  margin: 0 auto 26px;
+}
+@media (min-width: 920px){
+  .coverage__chips{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.chip{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  justify-content:center;
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: rgba(255,255,255,.90);
+  font-weight: 800;
+  font-size: 13px;
+}
+.coverage__note{
+  text-align:center;
+  color: rgba(255,255,255,.72);
+  margin: 0 auto 18px;
+}
+.coverage__cta{ display:flex; justify-content:center; }
+</style>

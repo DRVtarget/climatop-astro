@@ -1,0 +1,59 @@
+---
+const {
+  phone = "+34 645 558 969",
+  phoneHref = "tel:+34645558969",
+  ctaLabel = "Request a Quote",
+  ctaHref = "#contact",
+} = Astro.props;
+---
+<header class="top">
+  <div class="container nav">
+    <a class="brand" href="#top">CLIMATOP</a>
+
+    <nav class="links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="right">
+      <a class="phone" href={phoneHref}>☎ {phone}</a>
+      <a class="btn btn--primary" href={ctaHref}>{ctaLabel}</a>
+    </div>
+  </div>
+</header>
+
+<style>
+.top{
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(244,247,251,.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+  padding: 14px 0;
+}
+.brand{
+  font-weight: 950;
+  letter-spacing: .06em;
+  color: var(--brand);
+}
+.links{
+  display:flex;
+  gap: 18px;
+  font-weight: 800;
+  color: #27405f;
+}
+.links a:hover{ color: var(--text); }
+.right{ display:flex; align-items:center; gap: 14px; }
+.phone{ color:#27405f; font-weight: 900; }
+@media (max-width: 980px){
+  .links{ display:none; }
+}
+</style>

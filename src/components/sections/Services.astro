@@ -1,0 +1,44 @@
+---
+const items = [
+  { title: "Installation", text: "Split & multi-split systems sized correctly, installed cleanly with proper commissioning." },
+  { title: "Maintenance", text: "Preventive care to keep your system efficient, quiet and reliable year-round." },
+  { title: "Repairs", text: "Fast diagnostics and repair for most major brands across Costa Blanca." },
+  { title: "Urgent Call-outs", text: "When it matters — quick response availability during peak season." },
+];
+---
+<section id="services" class="section">
+  <div class="container">
+    <h2 class="h2">Our Services</h2>
+    <p class="sub">Complete air conditioning and heat-pump solutions for homeowners and small businesses.</p>
+
+    <div class="grid grid--4">
+      {items.map((it) => (
+        <article class="card c">
+          <div class="c__icon">✓</div>
+          <h3 class="c__title">{it.title}</h3>
+          <p class="c__text">{it.text}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="center">
+      <a class="btn btn--outline" href="#contact">Get a Free Quote →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.c{ padding: 22px 18px; min-height: 156px; }
+.c__icon{
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display:grid; place-items:center;
+  background: rgba(31,111,235,.10);
+  color: var(--brand);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.c__title{ margin:0 0 8px; font-size: 16px; }
+.c__text{ margin:0; color: var(--muted); line-height:1.6; font-size: 14px; }
+.center{ display:flex; justify-content:center; margin-top: 26px; }
+</style>

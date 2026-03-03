@@ -1,0 +1,69 @@
+<footer id="contact" class="footer">
+  <div class="container footer__grid">
+    <div>
+      <div class="footer__brand">CLIMATOP</div>
+      <p class="footer__text">
+        Premium installation, maintenance and heat-pump solutions across Costa Blanca.
+      </p>
+    </div>
+
+    <div>
+      <div class="footer__title">Quick Links</div>
+      <a class="footer__link" href="#services">Services</a>
+      <a class="footer__link" href="#coverage">Coverage</a>
+      <a class="footer__link" href="#contact">Contact</a>
+    </div>
+
+    <div>
+      <div class="footer__title">Contact</div>
+      <div class="footer__text">☎ +34 645 558 969</div>
+      <div class="footer__text">📩 info@climatop.eu</div>
+      <div class="footer__text">Costa Blanca, Spain</div>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    © {new Date().getFullYear()} Climatop. All rights reserved.
+  </div>
+</footer>
+
+<style>
+.footer{
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy2) 100%);
+  color: rgba(255,255,255,.86);
+  padding: 64px 0 28px;
+}
+.footer__grid{
+  display:grid;
+  gap: 28px;
+}
+@media (min-width: 920px){
+  .footer__grid{ grid-template-columns: 2fr 1fr 1fr; }
+}
+.footer__brand{
+  font-weight: 950;
+  letter-spacing: .06em;
+  color: #7fb2ff;
+  margin-bottom: 10px;
+}
+.footer__title{
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer__text{ color: rgba(255,255,255,.72); line-height:1.6; }
+.footer__link{
+  display:block;
+  margin: 8px 0;
+  color: rgba(255,255,255,.72);
+}
+.footer__link:hover{ color:#fff; }
+.footer__bottom{
+  border-top: 1px solid rgba(255,255,255,.10);
+  margin-top: 32px;
+  padding-top: 18px;
+  color: rgba(255,255,255,.55);
+  font-size: 13px;
+  text-align:center;
+}
+</style>

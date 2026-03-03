@@ -1,0 +1,31 @@
+---
+const {
+  title = "Need Air Conditioning or a Heat Pump?",
+  text = "Request a no-pressure quote. We’ll recommend the best option for your home.",
+  primary = { label: "Request Free Quote", href: "#contact" },
+  secondary = { label: "+34 645 558 969", href: "tel:+34645558969" },
+} = Astro.props;
+---
+<section class="cta">
+  <div class="container cta__inner">
+    <h2 class="cta__title">{title}</h2>
+    <p class="cta__text">{text}</p>
+    <div class="cta__buttons">
+      <a class="btn btn--primary" href={primary.href}>{primary.label}</a>
+      <a class="btn btn--ghost" href={secondary.href}>☎ {secondary.label}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.cta{
+  padding: 82px 0;
+  background: radial-gradient(800px 400px at 50% 0%, rgba(31,111,235,.35), transparent 60%),
+              linear-gradient(180deg, #0f5dd1 0%, #0b4fbf 100%);
+  color: #fff;
+}
+.cta__inner{ text-align:center; }
+.cta__title{ font-size: var(--h2); margin: 0 0 10px; }
+.cta__text{ margin: 0 auto 22px; max-width: 70ch; color: rgba(255,255,255,.88); line-height:1.6; }
+.cta__buttons{ display:flex; gap: 12px; justify-content:center; flex-wrap: wrap; }
+</style>

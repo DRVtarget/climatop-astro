@@ -1,22 +1,11 @@
-# Climatop (Astro)
+# Climatop Astro Premium Pack (EN)
 
-Premium hybrid layout (dark hero + light sections) for Climatop.
+This zip contains only the files/folders you need to copy into your Astro project.
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
-## Customize
-
-Edit contact details in:
-
-- `src/pages/index.astro` (phone, WhatsApp, email)
-- `src/components/organisms/Header.astro` (nav + CTA)
-- `src/components/organisms/Hero.astro` (headline, proof pills)
-
-Global styling:
-
-- `src/styles/globals.css`
+## How to use
+1) Unzip
+2) Copy the `src/` and `public/` folders into your Astro project (overwrite when asked)
+3) Replace `public/images/hero.jpg` with a real hero image (villa / clean interior in Costa Blanca)
+4) Run:
+   npm install
+   npm run dev

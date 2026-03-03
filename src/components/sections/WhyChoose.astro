@@ -1,0 +1,39 @@
+---
+const items = [
+  { title: "Clean Installation", text: "Neat pipe routes, careful positioning, and a tidy finish." },
+  { title: "Quality & Warranty", text: "We use proven brands and stand behind our workmanship." },
+  { title: "Transparent Quotes", text: "Clear pricing and options explained before any work starts." },
+  { title: "Homeowner Support", text: "Friendly service for expats and local homeowners across Costa Blanca." },
+];
+---
+<section class="section">
+  <div class="container">
+    <h2 class="h2">Why Homeowners Choose Climatop</h2>
+    <p class="sub">Comfort first — with a clean finish and a clear process.</p>
+
+    <div class="grid grid--4">
+      {items.map((it) => (
+        <article class="card c">
+          <div class="c__icon">✓</div>
+          <h3 class="c__title">{it.title}</h3>
+          <p class="c__text">{it.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+.c{ padding: 22px 18px; min-height: 156px; }
+.c__icon{
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display:grid; place-items:center;
+  background: rgba(31,111,235,.10);
+  color: var(--brand);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.c__title{ margin:0 0 8px; font-size: 16px; }
+.c__text{ margin:0; color: var(--muted); line-height:1.6; font-size: 14px; }
+</style>

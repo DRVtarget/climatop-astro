@@ -1,0 +1,113 @@
+---
+const {
+  image = "/images/hero.jpg",
+  title = "Air Conditioning.\nDone Properly.",
+  subtitle = "Installation, maintenance & heat pumps for Costa Blanca homeowners. Clean finish, transparent pricing, fast response.",
+  areas = "COSTA BLANCA • TORREVIEJA • ORIHUELA COSTA • GUARDAMAR • QUESADA",
+  primaryCta = { label: "Book Free Visit", href: "#contact" },
+  secondaryCta = { label: "Call Now", href: "tel:+34645558969" },
+} = Astro.props;
+---
+<section id="top" class="hero">
+  <div class="hero__bg" style={`background-image:url(${image})`}></div>
+  <div class="hero__overlay"></div>
+
+  <div class="hero__rhombus" aria-hidden="true"></div>
+
+  <div class="container hero__inner">
+    <div class="kicker">{areas}</div>
+    <h1 class="h1 hero__title">{title}</h1>
+    <p class="hero__sub">{subtitle}</p>
+
+    <div class="hero__cta">
+      <a class="btn btn--primary" href={primaryCta.href}>{primaryCta.label} →</a>
+      <a class="btn btn--ghost" href={secondaryCta.href}>☎ {secondaryCta.label}</a>
+    </div>
+
+    <div class="hero__proofs">
+      <span class="pill">✓ Same-week install</span>
+      <span class="pill">✓ Clean finish</span>
+      <span class="pill">✓ English-speaking</span>
+    </div>
+  </div>
+
+  <div class="hero__fade"></div>
+</section>
+
+<style>
+.hero{
+  position: relative;
+  min-height: 78vh;
+  display:grid;
+  align-items:center;
+  overflow:hidden;
+}
+.hero__bg{
+  position:absolute; inset:0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+.hero__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(90deg,
+    rgba(11,22,40,.72) 0%,
+    rgba(11,22,40,.44) 46%,
+    rgba(11,22,40,.14) 100%
+  );
+}
+.hero__inner{
+  position: relative;
+  padding: 96px 0 72px;
+  max-width: 780px;
+}
+.hero__title{ color:#fff; white-space: pre-line; }
+.hero__sub{
+  color: rgba(255,255,255,.90);
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 14px 0 22px;
+  max-width: 62ch;
+}
+.hero__cta{ display:flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.hero__proofs{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+.hero__rhombus{
+  position:absolute;
+  right:-260px;
+  top: 10%;
+  width: 520px;
+  height: 520px;
+  transform: rotate(45deg);
+  border-radius: 28px;
+  opacity: .16;
+  border: 1px solid rgba(255,255,255,.18);
+  background:
+    radial-gradient(circle at 35% 35%, rgba(31,111,235,.55), rgba(31,111,235,0) 55%),
+    linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,0) 60%);
+}
+.hero__rhombus::before,
+.hero__rhombus::after{
+  content:"";
+  position:absolute;
+  inset: 18%;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.hero__rhombus::after{
+  inset: 42%;
+  opacity: .85;
+}
+
+.hero__fade{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(244,247,251,0) 0%, rgba(244,247,251,1) 100%);
+}
+
+@media (max-width: 900px){
+  .hero__inner{ padding: 76px 0 60px; }
+  .hero__rhombus{ right:-340px; opacity:.13; }
+}
+</style>
